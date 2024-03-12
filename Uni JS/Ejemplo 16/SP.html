@@ -1,0 +1,9 @@
+IF EXISTS (SELECT 1 FROM sys.objects s WHERE s.object_id =
+OBJECT_ID(N'[dbo].[usp_eliminar_abm_tprod_deremi]') AND type IN (N'P', N'PC'))
+DROP PROCEDURE [dbo].[usp_eliminar_abm_tprod_deremi] IF EXISTS (SELECT 1 FROM
+sys.objects s WHERE s.object_id =
+OBJECT_ID(N'[dbo].[usp_eliminar_abm_tprod_deremi_core]') AND type IN (N'P',
+N'PC')) DROP PROCEDURE [dbo].[usp_eliminar_abm_tprod_deremi_core] SET ANSI_NULLS
+ON GO SET QUOTED_IDENTIFIER ON GO GO IF NOT EXISTS (SELECT 1 FROM sys.synonyms
+synony WHERE synony.name='USP_ELIMINAR_ABM_TPROD_DEREMI') CREATE SYNONYM
+dbo.USP_ELIMINAR_ABM_TPROD_DEREMI FOR [dbo].[usp_eliminar_abm_tprod_deremi_core]

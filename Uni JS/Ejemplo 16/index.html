@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Documento de prueba DOM</title>
+  </head>
+  <body>
+    <h1 id="mensajeUno">Mensaje con h1</h1>
+    <h2 id="mensajeDos">Mensaje con h2</h2>
+    <a href="ejemplos.html">Ejemplos</a>
+
+    <script>
+      let MensajeH1 = document.getElementById("mensajeUno").innerHTML;
+      console.log(MensajeH1);
+      let MensajeH2 = document.getElementById("mensajeDos");
+      console.log("El mensaje 2 es: " + MensajeH2.innerHTML);
+      mensajeUno.innerHTML = "Nuevo mensaje Uno";
+    </script>
+  </body>
+</html>
