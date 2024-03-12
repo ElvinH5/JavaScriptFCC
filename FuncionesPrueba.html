@@ -1,0 +1,26 @@
+<script>
+
+        // Define una función proximoEnLaFila que tome un arreglo y un número
+        // como argumentos. Agrega el número al final del arreglo y luego elimina el primer 
+        // elemento del arreglo. La función debe retornar el elemento que fue removido.
+
+    function proximoEnLaFila(array , numero){
+        
+
+     console.log("El arreglo original es: " + array);
+     console.log("El numero es " + numero);
+     array.push(numero)
+     console.log("El arreglo nuevo es: " + array);
+     array.shift();
+    
+     console.log("El arreglo final es: " + array);
+
+    }
+
+
+    proximoEnLaFila([1,2,3] , 5);
+
+
+
+
+</script>
