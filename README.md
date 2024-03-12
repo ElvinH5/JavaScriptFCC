@@ -1,2 +1,2 @@
-# JavaScriptFCC
-Aprendizaje de JavaScript
+# Cursos
+Aprendizaje de Programación
