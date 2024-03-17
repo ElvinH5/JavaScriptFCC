@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+            if (true) {
+              console.log("La condición es verdadera.");
+            }
+
+            // Condición verdadera (true).
+
+            var x = 5;
+
+            if (x > 2) {
+              console.log("La condición es verdadera");
+            }
+
+            if (x > 2 && x < 10) {
+              console.log("La condición es verdadera");
+            }
+
+            // Ejemplo
+
+            var estacion = "Invierno";
+
+            if (estacion == "Invierno") {
+              console.log("¡Si! Me encanta el invierno.");
+            }
+
+            console.log("Después del condicional...");
+
+            /*
+      Curso de freeCodeCamp: "Aprende JavaScript - Curso Completo desde Cero".
+      Curso Creado por: Estefania Cassingena Navone (@EstefaniaCassN).
+      Tema: Cláusula "else" en sentencias condicionales.
+      */
+
+            if (false) {
+              console.log("La condición es verdadera.");
+            } else {
+              console.log("La condición es falsa.");
+            }
+
+            // Ejemplo
+
+            var x = 5;
+
+            if (x < 2) {
+              console.log("La condición es verdadera.");
+            } else {
+              console.log("La condición es falsa.");
+            }
+
+            // Ejemplo
+
+            var estacion = "Invierno";
+
+            if (estacion === "Verano") {
+              console.log("Comenzó el verano. Ya podemos ir a la playa.");
+            } else {
+              console.log("Ya quiero que llegue el verano para poder ir a la playa");
+            }
+
+            /*
+      Curso de freeCodeCamp: "Aprende JavaScript - Curso Completo desde Cero".
+      Curso Creado por: Estefania Cassingena Navone (@EstefaniaCassN).
+      Tema: Cláusula "else if" en sentencias condicionales.
+      */
+
+            function clasificarValor(valor) {
+              if (valor % 2 == 0) {
+                console.log("Divisible entre 2.");
+              } else if (valor % 3 == 0) {
+                console.log("Divisible entre 3.");
+              } else {
+                console.log("No es divisible entre las opciones.");
+              }
+            }
+
+            clasificarValor(2);
+            clasificarValor(15);
+            clasificarValor(7);
+
+            /*
+      Condicionales Orden Lógico
+      */
+
+            function clasificarValor(valor) {
+              if (valor < 5) {
+                console.log("Menor que 5.");
+              } else if (valor < 10) {
+                console.log("Menor que 10.");
+              } else {
+                console.log("Mayor o igual que 10.");
+              }
+            }
+
+            clasificarValor(7);
+            clasificarValor(2);
+            clasificarValor(15);
+
+            /*
+      Encadenar IF ELSE
+      */
+
+            function interpretarIMC(indiceDeMasaCorporal) {
+              if (indiceDeMasaCorporal < 18.5) {
+                console.log("Bajo Peso");
+              } else if (indiceDeMasaCorporal <= 24.9) {
+                console.log("Normal");
+              } else if (indiceDeMasaCorporal <= 29.9) {
+                console.log("Sobrepeso");
+              } else {
+                console.log("Obeso");
+              }
+            }
+
+            interpretarIMC(17.8);
+            interpretarIMC(22.2);
+            interpretarIMC(28.5);
+            interpretarIMC(32.2);
+
+            /*
+      Curso de freeCodeCamp: "Aprende JavaScript - Curso Completo desde Cero".
+      Curso Creado por: Estefania Cassingena Navone (@EstefaniaCassN).
+      Tema: Código de Golf
+      */
+
+            /*
+      En el juego de golf cada hoyo tiene un par que
+      representa el número promedio de golpes
+      que se espera que haga un golfista para introducir
+      la pelota en el hoyo.
+
+      Hay un nombre diferente dependiendo de qué tan
+      por encima o por debajo del par estén tus golpes.
+
+      Tu función tomará los argumentos par y golpes.
+
+      Retorna la cadena correcta según esta tabla que muestra
+      los golpes en orden de mayor a menor prioridad:
+
+      Golpes             Retornar
+      -------------------------------
+      1	               "Hole-in-one!"
+      <= par - 2	       "Eagle"
+      par - 1	           "Birdie"
+      par	               "Par"
+      par + 1	           "Bogey"
+      par + 2	           "Double Bogey"
+      >= par + 3	       "Go Home!"
+
+      par y golpes siempre serán numéricos y positivos.
+      */
+
+      function puntajeDeGolf(par, golpes) {
+        if (golpes == 1) {
+          return "Hole-in-one!";
+        } else if (golpes <= par - 2) {
+          return "Eagle";
+        } else if (golpes == par - 1) {
+          return "Birdie";
+        } else if (golpes == par) {
+          return "Par";
+        } else if (golpes == par + 1) {
+          return "Bogey";
+        } else if (golpes == par + 2) {
+          return "Double Bogey";
+        } else if (golpes >= par + 3) {
+          return "Go Home!";
+        }
+      }
+
+      puntajeDeGolf(4, 1);  // Hole-in-one!
+      puntajeDeGolf(4, 2);  // Eagle
+      puntajeDeGolf(4, 3);  // Birdie
+      puntajeDeGolf(4, 4);  // Par
+      puntajeDeGolf(4, 5);  // Bogey
+      puntajeDeGolf(4, 6);  // Double Bogey
+      puntajeDeGolf(4, 7);  // Go Home!
+      puntajeDeGolf(4, 15); // Go Home!
+            }
+    </script>
+  </body>
+</html>
