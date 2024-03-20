@@ -1,39 +1,34 @@
 <html>
+  <head> </head>
 
-<head>
-</head>
-
-<body>
-</body>
-
+  <body></body>
 </html>
 
-
 <script>
-
-
-function miMensajeUno(){
+  function miMensajeUno() {
     console.log("Hola");
-}
-function miMensajeDos(){
-    return ("Hola Alumno ");
-}
+  }
+  function miMensajeDos() {
+    return "Hola Alumno ";
+  }
 
-miMensajeUno();
+  miMensajeUno();
 
-for (let i = 1; i<=4; i++){
-    console.log("Mi mensaje es: " + miMensajeDos() + i );
-}
+  for (let i = 1; i <= 4; i++) {
+    console.log("Mi mensaje es: " + miMensajeDos() + i);
+  }
 
+  function miFuncionRetorno() {
+    console.log("Hola");
+    return "Mundo";
+    console.log("Adiós"); //Esto no se va a ejecutar porque se detiene con el return.
+  }
+  console.log(miFuncionRetorno());
 
-
-
-
-
-
-
-
-
-
-
+  // En casos como este me puede ayudar el return, cuando ya no quiero que continúe.
+  function calculaRaizCuadrada(num) {
+    if (num < 0) {
+      return undefined; //Como aqui se dentendría, entonces ya no tomaría en cuenta lo demás.
+    }
+    return Math.sqrt(num); //Aquí ya estaría retornando el valor cuando si se pueda.
 </script>
