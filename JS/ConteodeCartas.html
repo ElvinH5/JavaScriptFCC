@@ -46,7 +46,19 @@ El conteo actual y la decisión del jugador
 ("Apostar" o "Esperar") deben estar separados por un espacio.
 */
       let conteo;
-      function conteoCartas(carta) {}
+      function conteoCartas(carta) {
+        switch(carta){
+          case 2:
+            console.log("Apostar");
+            break;
+          case 7:
+            console.log("Esperar");
+            break;
+        }
+      }
+
+
+      conteoCartas(7);
     </script>
   </body>
 </html>
