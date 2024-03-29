@@ -40,17 +40,26 @@
     }
     var posicion = 3;
 
-    console.log("El cuarto lugar es de: "+ resultados[posicion]);
+    console.log("El cuarto lugar es de: "+ resultados[posicion]); //Esto no se puede hacer con la notación de punto.
     
     
+    // CAMBIAR EL VALOR DE LAS PROPIEDADES.
+
+    var mochila = {
+        color: "Rojo",
+        tamanio: "mediano",
+        contenido: [" botella de agua", " cuaderno"]
+    }
     
+    console.log("La mochila es de color "+ mochila["color"]);//No olvidar colocar las comillas en el nombre de la propiedad.
     
+    mochila.color= "verde"; //Cambiamos el valor.
+    console.log("La mochila es de color "+ mochila["color"]);    
     
-    
-    
-    
-    
-    
+    mochila.contenido.push(" Lápiz"); //Aquí acudimos a la funcioón PUSH para agregarle otro valor a el arreglo.
+
+    console.log("La mochila tiene:"+ mochila["contenido"]); //Aquí ya mostará lo que le agregamos con el push.
+    // También podría cambiarle el valor por otro arreglo totalmente diferente.
     
     </script>
 </body>
