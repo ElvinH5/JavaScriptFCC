@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var miPerro = {
+            "nombre": "Bobby",
+            "edad": 10,
+            "peso": 6,
+            "raza": "Mestizo"
+        };
+
+        // Acceder a las propiedades del objeto:
+// Notacion de punt0.
+    console.log(miPerro.nombre); //Me mostrará el nombre del perro.
+
+        // Acceder a las propiedades de un objeto.
+        var miCuaderno = {
+            color: "Verde", //No importa si no se le coloca comillas a la propiedad COLOR porque esta no lleva espacios.
+            categoria: 3,
+            "Numero de paginas": 200 //El nombre de la propiedad debe llevar comillas cuando lleva espacios.
+        }
+        // Notación de corchete.
+        console.log(miCuaderno["color"]); //Aqui si hay que colocarle las comillas a la propiedad.
+        console.log(miCuaderno["Numero de paginas"]);
+        // console.log(miCuaderno.Numero de paginas); Con notación de punto, no podría usar esta propiedad, porque tiene espacios.
+    
+    
+    // ACCEDER A PROPIEDADES DE LOS OBJETOS Y GUARDARLOS EN VARIABLES.
+
+    let resultados = {
+        1: "Jennie",
+        2: "Lisa",
+        3: "Jisoo",
+        4: "Rose"
+    }
+    var posicion = 3;
+
+    console.log("El cuarto lugar es de: "+ resultados[posicion]);
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    </script>
+</body>
+</html>
