@@ -61,6 +61,100 @@
     console.log("La mochila tiene:"+ mochila["contenido"]); //Aquí ya mostará lo que le agregamos con el push.
     // También podría cambiarle el valor por otro arreglo totalmente diferente.
     
+
+    // AÑADIR MÁS PROPIEDADES A UN OBJETO.
+
+    var curso = {
+        "titulo": "Aprende JS",
+        "idioma": "Español",
+        "duracion": "30 horas."
+    }
+
+    curso.vistas = 25000; //Con esto le estaría agregando otra propiedad a mi objeto.
+    console.log("Estas son las vistas del curso:"+ curso["vistas"]); //aquí mostraría el valor de la propiedad que se ha agregado.
+
+    //LAS SIGUIENTES SON 2 FORMAS DE MOSTRAR LOS VALORES DEL OBJETO.
+    const valoresCurso = Object.values(curso);
+    console.log("Valores del curso:", valoresCurso);
+
+    // in: Esta palabra clave se usa para comprobar si una propiedad existe en un objeto. 
+    // En este caso, se comprueba si la propiedad actual (propiedad) existe en el objeto curso.
+    for (const propiedad in curso) {
+        // De las 2 formas siguientes se podrían mostrar los valores de las propiedades.
+        console.log(`Propiedad: ${propiedad}, Valor: ${curso[propiedad]}`); 
+        console.log("Propiedad: "+ propiedad + ", Valor: " + curso[propiedad]);
+    }
+
+
+    // ELIMINAR PROPIEDADES.
+     gato = {
+        nombre: "Mincky",
+        raza: "Michy",
+        color: "Blanco y Negro"
+     }
+
+     delete gato.color;
+     console.log(gato); //Aquí muesto el objeto y ya no aparecerá la propiedad que se eliminó.
+     
+
+
+     
+// Inicialmente es una sentencia switch
+// y vamos a reemplazarla con un objeto.
+
+// function buscarElementoQuimico(simbolo) {
+//   var elementoQuimico = "";
+
+//   switch (simbolo) {
+//     case "Al":
+//       elementoQuimico = "Aluminio";
+//       break;
+//     case "S":
+//       elementoQuimico = "Azufre";
+//       break;
+//     case "Cl":
+//       elementoQuimico = "Cloro";
+//       break;
+//     case "He":
+//       elementoQuimico = "Helio";
+//       break;
+//     case "B":
+//       elementoQuimico = "Boro";
+//       break;
+//     case "Li":
+//       elementoQuimico = "Litio";
+//       break;
+//   }
+//   return elementoQuimico;
+// }
+  
+// console.log(buscarElementoQuimico("Al"));
+// console.log(buscarElementoQuimico("S"));
+// console.log(buscarElementoQuimico("Cl"));
+// console.log(buscarElementoQuimico("He"));
+// console.log(buscarElementoQuimico("B"));
+// console.log(buscarElementoQuimico("Li"));
+
+// Podemos cambiar switch por un objeto. 
+
+function buscarElementoQuimico(simbolo) {
+  var simbolosQuimicos = {
+    "Al": "Aluminio",
+    "S": "Azufre",
+    "Cl": "Cloro",
+    "He": "Helio",
+    "B": "Boro",
+    "Li": "Litio"
+  };
+  return simbolosQuimicos[simbolo];
+}
+
+console.log(buscarElementoQuimico("Al"));
+console.log(buscarElementoQuimico("S"));
+console.log(buscarElementoQuimico("Cl"));
+console.log(buscarElementoQuimico("He"));
+console.log(buscarElementoQuimico("B"));
+console.log(buscarElementoQuimico("Li"));
     </script>
 </body>
 </html>
