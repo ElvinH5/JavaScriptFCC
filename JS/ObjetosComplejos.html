@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <Script>
+        var ordenesDePizzas = 
+        [
+            {
+                "tipo": "margarita",
+                "tamaño": "individual",
+                "precio": 150,
+                "toppings": ["Extra queso","Champiñones","Piña"],
+                "paraLlevar": true
+            },
+            {
+                "tipo": "Cuatro quesos",
+                "tamaño": "Familiar",
+                "precio": 150,
+                "toppings": ["Extra queso","Pimentón"],
+                "paraLlevar": false
+            }
+        ]
+        // Aquí hay que entender que estamos trabajando con un arreglo que tiene objetos. 
+        // Osea que cada objeto tiene un lugar en ese arreglo.
+        console.log(ordenesDePizzas[0]);
+        console.log(ordenesDePizzas[1]);
+
+        console.log
+        (`
+            Tipo de pizza: ${ordenesDePizzas[0].tipo}
+            Tamaño: ${ordenesDePizzas[0].tamaño}
+            Precio: $${ordenesDePizzas[0]["precio"]} 
+            Toppings: ${ordenesDePizzas[0].toppings.join(", ")}
+            Para llevar: ${ordenesDePizzas[0].paraLlevar ? "Sí" : "No"}
+        `); // El de precio es un ejemplo de cómo sería con notación de corchete.
+    </Script>
+</body>
+</html>

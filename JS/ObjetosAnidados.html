@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+var miReceta = //miReceta es mi objeto principal.
+{
+    "descripcion": "Mi postre favorito", //Esta es una propiedad del objeto miReceta.
+    "costo": 150,                        //Esta es una propiedad del objeto miReceta.
+    "ingredientes": //Esta es una propiedad del objeto miReceta. Pero esta propiedad contiene 2 propiedades, que a su vez son 2 objetos.
+    {
+            "masa": //Esta es una propiedad que contiene un objeto con sus propiedades.
+            {
+                "harina": "100 gramos",
+                "sal": "1 cucharadita",
+                "agua": "1 taza"
+            },
+            "cobertura": //Esta es una propiedad que contiene un objeto con sus propiedades.
+            {
+                "azucar": "120 grs",
+                "chocolate": "4 cucharadas",
+                "mantequilla": "200 grs"
+            }
+    }
+}
+console.log(miReceta["ingredientes"]["masa"]);
+
+
+
+
+// ACCEDER A ELEMENTOS DE UN OBJETOS CON ARREGLOS ANIDADO.
+
+var misPlantas =
+[
+    {
+        tipo: "flores",
+        lista: ["rosas", "tulipanes", "dientes de león"]
+    },
+    {
+        tipo: "árboles",
+        lista: ["abeto", "pino", "abedul"] 
+    }
+
+]
+
+var miPrimeraFlor = misPlantas[0].lista;
+
+console.log("La lista es: "+miPrimeraFlor);
+
+console.log(misPlantas[0]["lista"][1]); //En esta línea estoy accediendo a tulipanes.
+    </script>
+</body>
+</html>

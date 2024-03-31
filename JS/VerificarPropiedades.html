@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var mochila = {
+            color: "Rojo",
+            precio: 150
+        }
+        console.log(mochila.hasOwnProperty("color"));//El hasOwnProperty es como que pregunta si tiene esa propiedad.
+        //Me mostrará true si el objeto tiene esa propiedad y false si no la tiene.
+
+
+        //Ahora hacer un ejercicio
+        function verificarPropiedad(objeto, propiedad){
+            if (objeto.hasOwnProperty(propiedad)){
+                return "El objeto si tiene la propiedad " + propiedad;
+            }else{
+                return "No existe esa propiedad.";
+            }
+            // return objeto.hasOwnProperty(propiedad);
+        }
+        console.log(verificarPropiedad(mochila, "color"));
+    </script>
+</body>
+</html>
