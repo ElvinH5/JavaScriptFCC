@@ -1,89 +1,70 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-</head>
-<body>
+  </head>
+  <body>
     <script>
+      /*
+      Tenemos un objeto que representa parte de una colección
+      de álbumes musicales.
 
+      Cada álbum tiene un número de identificación único (id)
+      asociado a otras propiedades.
 
+      No todos los álbumes tienen la información completa.
+      */
 
-/*
-Curso de freeCodeCamp: "Aprende JavaScript - Curso Completo desde Cero".
-Curso Creado por: Estefania Cassingena Navone (@EstefaniaCassN).
-Tema: Colección de discos.
-*/
+      /*
+      Define una función actualizarDiscos que tome los siguientes parámetros:
+      - discos (el objeto que representa la colección de discos).
+      - id.
+      - propiedad ("artista" o "canciones").
+      - valor.
 
-/*
-Tenemos un objeto que representa parte de una colección 
-de álbumes musicales. 
+      Tu meta es completar la función implementando las siguientes reglas
+      para modificar el objeto pasado a la función:
 
-Cada álbum tiene un número de identificación único (id) 
-asociado a otras propiedades. 
+      - Si "valor" es una cadena vacía, elimina la propiedad
+      del álbum correspondiente.
 
-No todos los álbumes tienen la información completa.
-*/
+      - Si "propiedad" es igual a la cadena de caracteres "canciones" pero
+      el álbum no tiene una propiedad llamada "canciones", crea un arreglo
+      vacío y agrega "valor" a ese arreglo.
 
-var coleccionDeDiscos = {
-  7853: {
-    tituloDelAlbum: "Bee Gees Greatest",
-    artista: "Bee Gees",
-    canciones: ["Stayin' Alive"]
-  },
-  5439: {
-    tituloDelAlbum: "ABBA Gold"
-  }
-};
+      - Si "propiedad" es igual a la cadena de caracteres "canciones" y
+      "valor" no es una cadena vacía, agrega "valor" al final del arreglo
+      de canciones del álbum correspondiente.
 
-/* 
-Define una función actualizarDiscos que tome los siguientes parámetros:
-- discos (el objeto que representa la colección de discos).
-- id.
-- propiedad ("artista" o "canciones").
-- valor.
+      - Si "valor" no es una cadena vacía y "propiedad" no es igual a
+      "canciones", asigna el valor del parámetro "valor" a la propiedad.
+      Si la propiedad no existe, debes crearla y asignar este valor.
+      */
+      var coleccionDeDiscos = {
+        7853: {
+          tituloDelAlbum: "Bee Gees Greatest",
+          artista: "Bee Gees",
+          canciones: ["Stayin' Alive"],
+        },
+        5439: {
+          tituloDelAlbum: "ABBA Gold",
+        },
+      };
 
-Tu meta es completar la función implementando las siguientes reglas 
-para modificar el objeto pasado a la función:
+      console.log(JSON.stringify(coleccionDeDiscos));
+      function actualizarDiscos(discos, id, propiedad, valor) {
+        // if (valor == "") {
+        //   delete discos[id][propiedad];
+        // }
+        if (propiedad == "canciones") {
+          discos[id][propiedad] = [];
+        }
+        return console.log(JSON.stringify(discos));
+      }
 
-- Si "valor" es una cadena vacía, elimina la propiedad 
-del álbum correspondiente.
-
-- Si "propiedad" es igual a la cadena de caracteres "canciones" pero 
-el álbum no tiene una propiedad llamada "canciones", crea un arreglo 
-vacío y agrega "valor" a ese arreglo.
-
-- Si "propiedad" es igual a la cadena de caracteres "canciones" y 
-"valor" no es una cadena vacía, agrega "valor" al final del arreglo 
-de canciones del álbum correspondiente.
-
-- Si "valor" no es una cadena vacía y "propiedad" no es igual a 
-"canciones", asigna el valor del parámetro "valor" a la propiedad.
-Si la propiedad no existe, debes crearla y asignar este valor.
-*/
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+      actualizarDiscos(coleccionDeDiscos, 5439, "canciones", "");
     </script>
-</body>
+  </body>
 </html>
