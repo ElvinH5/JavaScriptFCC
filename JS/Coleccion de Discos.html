@@ -54,26 +54,47 @@
       };
 
       console.log(JSON.stringify(coleccionDeDiscos));
+      console.log(JSON.stringify(coleccionDeDiscos, null, 2));
       function actualizarDiscos(discos, id, propiedad, valor) {
-        // if (valor == "") {
-        //   delete discos[id][propiedad];
-        // }
-        // if (propiedad == "canciones") {
-        //   discos[id][propiedad] = [];
-        // }
-        //  if ((propiedad == "canciones") && valor !="")  {
-        //   discos[id][propiedad].push(valor);
-        // }
-            if ((propiedad != "canciones") && valor !="")  {
-              if()
-          discos[id][propiedad]=valor;
+        if (valor == "") {
+          delete discos[id][propiedad];
+        } else if (propiedad == "canciones") {
+          discos[id][propiedad] = [];
+        } else if (propiedad == "canciones" && valor != "") {
+          discos[id][propiedad].push(valor);
+        } else if (propiedad != "canciones" && valor != "") {
+          if (discos[id].hasOwnProperty(propiedad) == false) {
+            discos[id][propiedad] = valor;
+          }
         }
-        return console.log(JSON.stringify(discos));
+        return console.log(JSON.stringify(discos, null, 2));
       }
-      // - Si "valor" no es una cadena vacía y "propiedad" no es igual a
-      // "canciones", asigna el valor del parámetro "valor" a la propiedad.
-      // Si la propiedad no existe, debes crearla y asignar este valor.
-      actualizarDiscos(coleccionDeDiscos, 7853, "canciones", "Mundo");
+
+      actualizarDiscos(coleccionDeDiscos, 5439, "tituloComeBack", "THE ALBUM");
+
+      //LA SIGUIENTE FORMA ES COMO LA HIZO ELLA
+      console.log("LA SIGUIENTE FORMA ES COMO LA HIZO ELLA");
+
+      function actualizarDiscos(discos, id, propiedad, valor) {
+        if (valor === "") {
+          delete discos[id][propiedad];
+        } else if (propiedad === "canciones") {
+          discos[id][propiedad] = discos[id][propiedad] || [];
+          discos[id][propiedad].push(valor);
+        } else {
+          discos[id][propiedad] = valor;
+        }
+      }
+
+      console.log(coleccionDeDiscos);
+      actualizarDiscos(coleccionDeDiscos, 7853, "tituloDelAlbum", "");
+      console.log(coleccionDeDiscos);
+
+      actualizarDiscos(coleccionDeDiscos, 5439, "canciones", "Mamma Mia");
+      console.log(coleccionDeDiscos);
+
+      actualizarDiscos(coleccionDeDiscos, 5439, "artista", "ABBA");
+      console.log(coleccionDeDiscos);
     </script>
   </body>
 </html>
