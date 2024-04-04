@@ -58,13 +58,22 @@
         // if (valor == "") {
         //   delete discos[id][propiedad];
         // }
-        if (propiedad == "canciones") {
-          discos[id][propiedad] = [];
+        // if (propiedad == "canciones") {
+        //   discos[id][propiedad] = [];
+        // }
+        //  if ((propiedad == "canciones") && valor !="")  {
+        //   discos[id][propiedad].push(valor);
+        // }
+            if ((propiedad != "canciones") && valor !="")  {
+              if()
+          discos[id][propiedad]=valor;
         }
         return console.log(JSON.stringify(discos));
       }
-
-      actualizarDiscos(coleccionDeDiscos, 5439, "canciones", "");
+      // - Si "valor" no es una cadena vacía y "propiedad" no es igual a
+      // "canciones", asigna el valor del parámetro "valor" a la propiedad.
+      // Si la propiedad no existe, debes crearla y asignar este valor.
+      actualizarDiscos(coleccionDeDiscos, 7853, "canciones", "Mundo");
     </script>
   </body>
 </html>
