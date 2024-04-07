@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+    //     let contador = 0;
+    //     let array = [];
+    //     let array2 = [];
+
+    //     while (contador < 7){
+    //         array.push(contador);
+    //         contador ++;
+    //     }
+
+    //     console.log(array);
+
+    //     contador = 0;
+    //    do {
+    //         array2.push(contador);
+    //         contador ++;
+    //    } while (contador <4);
+
+    //     console.log(array2);
+
+    //    Para practicar, voy a escribir los arreglos de forma vertical con el ciclo for.
+
+    // for ( i = 0; i< array.length; i++){
+    //     console.log(array[i]);
+    // }
+
+   
+
+    // function crearCuadrado(num) {
+    //     for (i=0; i<num; i++){
+    //         console.log("");   
+    //         for (j=0; j<num; j++){
+    //         console.log(`${num} `);         
+    //     }      
+    //     }
+    // }
+
+    // crearCuadrado(5);
+
+
+        // De esta manera no me lo va a mostrar en mayúscula, porque no toUpperCase() 
+        // es un método que devuelve una nueva cadena con todos los caracteres en mayúsculas,
+        // pero no modifica la cadena original. 
+            let msg= "hola";
+            msg.toUpperCase(); //OJO, no olvidar colocar los () después del toUpperCase.
+            console.log(msg);
+        // De la siguiente manera si lo mostraría, pero no quedaría convertido a mayúsculas.
+            let msg2= "hola";           
+            console.log(msg.toUpperCase());          
+        // De la siguiente manera si quedaría convertido.
+            let mensaje = "hola";
+            mensaje = mensaje.toUpperCase();
+            console.log(mensaje); // Esto mostrará "HOLA"
+
+
+
+    //FUNCIÓN PARA PASAR A MAYÚSCULAS
+    // OJO, Nose se puede convertir un array de un solo a toUpperCase, debe de desglosarse siempre.
+    let misLenguajes = ["c Sharp","JavaScript","Python"];
+  
+    function convertir(array){
+       let array2=[]; //No olvidar inicializar este arreglo.
+       for (i=0; i<array.length; i++){
+            console.log(array[i].toUpperCase()); 
+            array2.push(array[i].toUpperCase()); //Aqui estoy creando otro arreglo para poder tener otro ya con los valores convertidos.
+        }
+        console.log(array2); // Aquí muestro el otro arreglo ya convertido.
+    }
+    convertir(misLenguajes);
+  
+ 
+
+    </script>
+</body>
+</html>
