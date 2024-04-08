@@ -34,14 +34,35 @@ var contactos = [
   }
 ];
 
-
+// Por ejemplo buscar el apellido con el nombre NORA
   function buscarPerfil(nombre, propiedad){
-
-
+    for(i=0; i<contactos.length; i++){
+        //Les coloqué el toUpperCase para que los compare estando ambos en mayúsculas.
+        //Eso permitirá que se pueda ingresar el nombre en mayúsculas, minúsculas o combinados.
+        if(contactos[i]["nombre"].toUpperCase()==nombre.toUpperCase() ){   
+            console.log("El nombre es: "+nombre);         
+            console.log("La propiedad es: "+propiedad);
+            console.log(contactos[i][propiedad]);
+        } 
+    }
   }
+buscarPerfil("Harry","gustos");
+buscarPerfil("Harry","dirección");//OJO, Aquí no me mostrará UNDEFINED, por eso el ejemplo de ella está mejor.                          
+console.log("\n");
 
-
-
+  //Ella lo hizo de la siguiente manera:
+function buscarPerfil2(nombre2, propiedad2) {
+  for (var i = 0; i < contactos.length; i++) {
+    if (contactos[i].nombre === nombre2) {
+        //Aquí lo que hace es que si la propiedad existe, retorna eso, sino entonces retorna que no existe.
+        return contactos[i][propiedad2] || "La propiedad no existe";
+    }
+  }
+  return "El contacto no está en la lista";
+}
+console.log(buscarPerfil2("Nora", "gustos"));
+console.log(buscarPerfil2("Sherlock", "apellido"));
+console.log(buscarPerfil2("Nora", "dirección"));// La propiedad no existe.
 
     </script>
 </body>
