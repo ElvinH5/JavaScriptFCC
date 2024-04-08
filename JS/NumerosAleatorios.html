@@ -20,6 +20,15 @@
         console.log(generarFraccionAleatoria());
 
 
+    // Genera un número aleatorio entre 0 (inclusive) y 1 (exclusivo), 
+    // luego lo multiplica por 20 para obtener un rango entre 0 (inclusive) y 21 (exclusivo), 
+    // y finalmente toma la parte entera del resultado utilizando Math.floor().
+    var numeroAleatorio = Math.floor(Math.random() * 21);
+    //Entonces Math.random() crea el número random entre 0 a antes del 1
+    //Lo multiplica por 21 para que el rango sea entre cero a antes del 21
+    //Luego el Math.floor() le quitará todos los decimales a ese número, para que quede entero.
+    // Imprime el número aleatorio generado en la consola.
+    console.log(numeroAleatorio);
 
 
 
