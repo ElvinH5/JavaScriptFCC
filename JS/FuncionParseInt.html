@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+        console.log(parseInt("5"));
+        console.log(parseInt("7.8"));//En este caso, solo se trunca, no lo redondea.
+
+        // FUNCIÓN parseInt CON UNA BASE.
+        console.log(parseInt("0000001",2));//Estaria pasando un binario a entero, el 2 es la base del binario.
+                            //OJO aquí, tuve que colocarlo como cadena de caracteres, porque si lo hacía como número
+                            //no me dejaría colocar un cero al principio.
+        // Si quisiera pasar algo a cadena de caracteres sería como toString.
+
+        // Ejemplo con hexadecimal.
+        console.log("El hexadecimal convertido es: "+parseInt("3E0A",16));
+
+    </script>
+</body>
+</html>

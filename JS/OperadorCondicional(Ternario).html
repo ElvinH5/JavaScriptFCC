@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+
+    function retornarMinimo(n1, n2){
+        return n1<n2 ? n1 : n2;
+    }      //Si es v retorna n1, sino retorna n2
+    console.log(retornarMinimo(3,2));
+
+    // ? Si es verdadera
+    // : Si es falsa
+
+
+    function comparaNumeros(a, b) {
+    // Si 'a' es igual a 'b', devuelve "a y b Son iguales"
+    return a == b ? "a y b Son iguales"  // Si la condición inicial es verdadera, se devuelve este resultado
+        // Si 'a' no es igual a 'b', se evalúa la siguiente condición
+        : a < b ? "a es menor que b"  // Si esta condición es verdadera, se devuelve este resultado
+                  // Si ninguna de las condiciones anteriores es verdadera,
+                 // se devuelve este resultado por defecto, que significa que 'a' debe ser mayor que 'b'
+        : "a es mayor que b";  // Si la condición inicial es falsa y no se cumple la segunda condición, se devuelve este resultado
+               // La línea comentada a continuación no funcionaría correctamente,
+              // ya que si se llega a esta parte, ya se ha determinado que 'a' no es igual a 'b' y tampoco es menor que 'b',
+             // por lo tanto, no tendría sentido realizar otra comparación y causaría un error de sintaxis.
+            // : a > b ? "a es mayor que b";
+}
+
+
+    console.log(comparaNumeros(5,5));
+    console.log(comparaNumeros(2,4));
+    console.log(comparaNumeros(9,7));
+
+
+
+
+    </script>
+</body>
+</html>

@@ -32,8 +32,20 @@
     console.log(numeroAleatorio);
 
 
+    // Números Aleatorios con un rango.
 
+    function numeroAleatorio2(rangoInicial, rangoFinal){
+        return Math.floor(Math.random()*(rangoFinal-rangoInicial+1)+rangoInicial);
+    }
+    console.log("\nLos siguientes son números aleatorios:");
 
+    let array=[];
+    for (i=0; i<5; i++){
+        console.log(numeroAleatorio2(1,10));
+        array.push(numeroAleatorio2(1,10))  
+   }
+
+    console.log(array);
 
 
 
