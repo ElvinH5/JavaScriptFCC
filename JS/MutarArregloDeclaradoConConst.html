@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      const MI_ARREGLO = [1, 2, 3, 4];
+
+      //MI_ARREGLO = [5, 4, 3, 2]; //ERROR, no se puede hacer.
+
+      //Para poder hacerlo debo mutar el arreglo de la siguiente manera:
+
+      MI_ARREGLO[0] = 5;
+      MI_ARREGLO[1] = 4;
+      MI_ARREGLO[2] = 3;
+      MI_ARREGLO[3] = 2;
+
+      //Ya habiéndolo mutado, si podré mostrarlo
+      //y los valores estarán cambiados.
+      console.log(MI_ARREGLO);
+
+      // CREAR UB OBJETO INMUTABLE
+
+      let colores = {
+        verde: "#10e04b",
+        azul: "#1b50e0",
+        negro: "#ffffff",
+      };
+
+      Object.freeze(colores);
+
+      //Ahora si intento agregar una propiedad
+      colores.amarillo = "#fff200";
+      //No se va a poder porque el objeto está congelado.
+      //Tampoco podría cambiarle el valor a una propiedad.
+
+      console.log(colores);
+    </script>
+  </body>
+</html>

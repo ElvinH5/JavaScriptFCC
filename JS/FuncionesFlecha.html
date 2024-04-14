@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Funciones Flecha</title>
+  </head>
+  <body>
+    <script>
+      //Son funciones que se usan cuando necesitamos definir
+      //funciones anónimas. Son funciones que no tienen un nombre específico.
+
+      //Aquí le estamos declarando una constante y le asignamos una función.
+      const fecha = function () {
+        return new Date();
+      }; //No es estrictamente necesario añadir un punto y coma al final de
+      //   una declaración de función como la que has mostrado. Sin embargo,
+      //   añadir un punto y coma al final de la declaración de la función
+      //   es una buena práctica en general para evitar posibles problemas
+      //   de interpretación por parte del motor JavaScript en ciertas situaciones.
+
+      const fecha2 = () => new Date(); //Esta es una funcion flecha.
+
+      //   Las funciones flecha son, de hecho, útiles cuando necesitamos definir
+      //   funciones anónimas, es decir, funciones que no tienen un nombre específico
+      //    y que generalmente se utilizan como argumentos de otras funciones o para
+      //    expresar lógica de manera más concisa.
+
+      //FUNCIONES FLECHA CON PARÁMETROS.
+
+      const sumarTres = function (x) {
+        return x + 3;
+      };
+
+      //Ahora el equivalente del anterior en una función flecha.
+      //Pero le cambiaré a sumarDos para poderlo mostrar.
+      const sumarDos = (x) => x + 2;
+
+      console.log(fecha());
+
+      console.log(sumarTres(2));
+    </script>
+  </body>
+</html>
