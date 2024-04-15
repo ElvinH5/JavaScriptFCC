@@ -39,6 +39,47 @@
       console.log(fecha());
 
       console.log(sumarTres(2));
+
+      const concatenarArr = function (arr1, arr2) {
+        return arr1.concat(arr2);
+      };
+
+      console.log("El siguiente es el arreglo concatenado:");
+      console.log(concatenarArr([1, 2], [3, 4, 5]));
+
+      //Lo anterior en función flecha sería de la siguiente manera:
+      const concatenarArray = (array1, array2) => array1.concat(array2);
+      //Coloco el nombre con el que se va a llamar a la función.
+      //El signo igual.
+      //Los argumentos.
+      //La fecla apuntando a lo que va a hacer la función.
+
+      console.log("El siguiente es el arreglo concatenado:");
+      console.log(concatenarArray([10, 20], [30, 40, 50]));
+
+      // OJO
+      // Expresión de función asignada a una constante: Las 2 formas anteriores
+      // son  una función asignada a una constante mediante una expresión de función.
+      // Esto significa que se crea una función anónima y se le asigna a la
+      // constante "concatenar". La función no puede ser invocada antes de su
+      // declaración.
+
+      //AHORA un ejemplo de una función flecha cuando tiene por ejemplo variables
+      //declaradas dentro de la función.
+      const sumar = (a, b) => {
+        let num = 5;
+        return a + b + num;
+      };
+
+      //LA SIGUIENTE ES LA MANERA TRADICIONAL.
+      // Función declarada: La primera forma es una función declarada,
+      // donde se define la función "concatenar" utilizando la palabra clave
+      // function. Esta forma permite invocar la función tanto antes como después
+      //  de su declaración, lo que significa que puede ser llamada antes de que
+      //  el código que la contiene sea ejecutado. Por ejemplo:
+      function concatenar(arr1, arr2) {
+        return array1.concat(array2);
+      }
     </script>
   </body>
 </html>
