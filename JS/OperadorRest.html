@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+//Se utiliza para recoger los argumentos restantes de una función en forma de un array. 
+// Este operador es útil cuando se desea manejar un número variable de argumentos en una 
+// función sin especificar cuántos argumentos se recibirán.
+
+        //Podría ser cualquier nombre, pero normalmente se usa args.
+        function miFuncion(...args){//Se identifican por esos ...
+            console.log(args);
+        }
+
+        console.log(miFuncion(1,2));//Estos los mostraria como un arrglo [1, 2]
+        console.log(miFuncion(5,4,3));//Estos los mostraria como un arrglo [5, 4, 3]
+        console.log(miFuncion([1,2,3],[4,5,6]));//Me mostraría los 2 arreglos dentro de un arreglo.
+
+        function miFuncion2(...args){//Se identifican por esos ...
+            console.log(args.length);
+        }
+        console.log(miFuncion2(4,5,2,7));//Me mostrará 4 porque tiene 4 argumentos.
+        console.log("\n");
+
+        // reduce Sirve para sumar todos los elementos de un arreglo.
+        const sumar = (x, y , z) => {
+            const args = [x, y, z];
+            return args.reduce((a, b) => a + b, 0);
+        }
+
+        //OTRO EJEMPLO
+// Definición de la función sumar que acepta un número variable de argumentos.
+function sumar(...numeros) {
+    // Inicialización de la variable total que almacenará la suma de los números.
+    let total = 0;
+    
+    // Iteración a través de los números recibidos como argumentos.
+    for (let numero of numeros) {
+        // Suma del número actual al total.
+        total += numero;
+    }
+    
+    // Devolución del resultado total de la suma.
+    return total;
+}
+
+
+    console.log(sumar(1, 2, 3, 4, 5)); // Salida: 15
+    console.log(sumar(10, 20, 30));     // Salida: 60
+
+    </script>
+</body>
+</html>
