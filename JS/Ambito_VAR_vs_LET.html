@@ -11,11 +11,21 @@
       console.log(miVariableGlobal);
 
       function miFuncion() {
-        console.log(miVariableGlobal);
-        var miVariableLocal = 7; //No podremos acceder a esta variable fuera de la función.
-        console.log(miVariableLocal);
+        console.log(miVariableGlobal); // Accedemos a la variable global dentro de la función.
+        var miVariableLocal = 7; // Declaramos una variable local dentro de la función.
+        console.log(miVariableLocal); // Mostramos el valor de la variable local.
       }
-      miFuncion();
+      miFuncion(); // Llamamos a la función. Aquí si se puede mostrar miVariableLocal
+      // porque ya fue mostrada dentro de la función.
+
+      // Explicación:
+      // - Dentro de la función `miFuncion`, se muestra el valor de `miVariableGlobal`.
+      // - Luego, se declara una variable local llamada `miVariableLocal` con un valor de 7.
+      // - Se muestra el valor de `miVariableLocal`.
+      // - Sin embargo, `miVariableLocal` solo es accesible dentro de la función `miFuncion` y no fuera de ella.
+      //Osea que de la siguiente manera no voy a poder mostrarla.
+      //console.log(miVariableLocal);
+
       console.log("El siguiente con VAR");
       //
       for (var i = 0; i < 2; i++) {
