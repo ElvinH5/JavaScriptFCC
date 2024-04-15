@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+</head>
+<body>
+    <h1>Hola Mundo</h1>
+
+</body>
+
+</html>
+
+<script>
+
+
+    //Arreglos
+    var myArray = ["Ana", 20];
+    console.log(myArray);
+    // for (let i=0; i= myArray.length; i++){
+    //     console.log(myArray[i]);
+    // }
+
+
+     //Arreglos Anidados
+     let productos = [["Camisa","Verde",200],["Pantalón","Azul",450],["Gorra","Negro",250]];
+     console.log(productos);
+
+    //Modificar un array
+
+    
+
+
+  //Acceder a arreglos multidimensionales
+  var miArregloC = [[1,2,3],[4,5,6],[7,8,9]];
+
+    /*
+    Arreglo:            [[1,2,3],[4,5,6],[7,8,9]]
+    Índicees:               0       1       2
+    Indices internos:     0 1 2   0 1 2   0 1 2
+    */
+    console.log("Mi array 1 es: "+ miArregloC[0]);
+    console.log("Mi array 2 es: "+ miArregloC[1]);
+    console.log("Mi array 3 es: "+ miArregloC[2]);
+    console.log("");
+    console.log(miArregloC[0][1]);
+
+    console.log("");
+
+    //Método PUSH y POP
+    let estaciones = ["Invierno","Otoño", "Primavera"];
+    estaciones.push("Verano"); //Le agrega al array
+    console.log(estaciones);
+    estaciones.pop();
+    console.log(estaciones);//Le quita el último elemento al array
+     let estacion;
+
+     estacion = estaciones.pop();//También puede servir para obtener el elemento
+     console.log(estacion);
+
+
+        // El método shift nos permite eliminar el primer elemento
+        estaciones.shift();
+        console.log(estaciones);
+
+        // También está el método unshift para agregar un elemento al principio del elemento
+        estaciones.unshift("VERANO");
+        console.log(estaciones);
+//Comentario hecho desde el celular 
+
+ </script>

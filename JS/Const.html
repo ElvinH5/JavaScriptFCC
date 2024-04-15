@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      const MI_CONSTANTE = 35; //En el caso de las constantes, debemos asignar el valor en una sola línea.
+      console.log(MI_CONSTANTE);
+
+      const MI_CONSTANTE = 40; //Aquí me daría error porque no puedo reasignarle a una constante.
+
+      //   Por convención, los nombres se las constantes se escriben con mayúsculas, para distinguirlas.
+      //   Por ejemplo CLIENTES, MODULO_USUARIO.
+
+      function calcularAreaCirculo(radio) {
+        const PI = 3.14;
+
+        if (radio < 0) {
+          return undefined; //Recordar que si esto se cumple, al hacer el return,
+          //aquí terminaría la función.
+        }
+        return PI * radio ** 2; //Los 2 asteriscos me sirven para elevar números,
+        //osea aquí radio al cuadrado.
+      }
+    </script>
+  </body>
+</html>
