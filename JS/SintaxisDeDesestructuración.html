@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sintaxis De Desestructuración</title>
+  </head>
+  <body>
+    <script>
+      const usuario = {
+        nombre: "Gino",
+        edad: 20,
+      };
+
+      //Así le asignaba el valor de un objeto a una variable.
+      //   const nombre = usuario.nombre;
+      //   const nombre = usuario.edad;
+
+      //   nombre y edad en este caso son el nombre de las variables que estoy creando.
+      //   usuario es el nombre del objeto.
+      //   Lo que hace es buscar en el objeto si hay propiedades con el mismo nombre
+      //   de mis variables, entonces le asigna el valor que tengan las del mismo nombre.
+      const { nombre, edad } = usuario;
+
+      document.write(nombre + "<br>");
+      document.write(edad);
+
+      var coordenadas = {
+        x: 4,
+        y: 6,
+        z: 12,
+      };
+
+      var { x, y, z } = coordenadas;
+    </script>
+  </body>
+</html>

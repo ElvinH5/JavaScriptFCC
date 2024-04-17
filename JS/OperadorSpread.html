@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      //OPERADOR SPREAD
+
+      const numeros = [1, 2, 3];
+
+      function sumar(x, y, z) {
+        return x + y + z;
+      }
+
+      console.log(sumar(numeros[0], numeros[1], numeros[2]));
+      document.write(sumar(numeros[0], numeros[1], numeros[2]));
+      document.write("<br>");
+      // En lugar de esto, lo puedo hacer más corto.
+      //Usando SPREAD que me ayudará a descomponer el arreglo.
+
+      //Ahora con SPREAD
+      console.log(sumar(...numeros)); //Esta sería la forma de mandarle los elementos de el arreglo por separado.
+      document.write(sumar(...numeros));
+    </script>
+  </body>
+</html>
