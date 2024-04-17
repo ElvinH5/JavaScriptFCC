@@ -23,7 +23,7 @@
       const { nombre, edad } = usuario;
 
       document.write(nombre + "<br>");
-      document.write(edad);
+      document.write(edad + "<br><br>");
 
       var coordenadas = {
         x: 4,
@@ -32,6 +32,55 @@
       };
 
       var { x, y, z } = coordenadas;
+
+      // Sintaxis De Desestructuración Objetos Anidados.
+
+      const USER = {
+        Irene: {
+          age: 30,
+          company: "SM",
+        },
+      };
+
+      const {
+        Irene: { age, company },
+      } = USER;
+      document.write(age + "<br>");
+      document.write(company + "<br><br>");
+
+      //Podría también crear las variables con otros nombres como el siguiente ejemplo:
+      const {
+        Irene: { age: edadUsuario, company: empresaUsuario },
+      } = USER;
+      document.write(edadUsuario + "<br>");
+      document.write(empresaUsuario + "<br><br>");
+
+      //OTRO EJEMPLO
+
+      const PRONOSTICO_LOCAL = {
+        ayer: {
+          minima: 20,
+          maxima: 40,
+        },
+        hoy: {
+          minima: 19,
+          maxima: 36,
+        },
+        manana: {
+          minima: 17,
+          maxima: 29,
+        },
+      };
+
+      const {
+        hoy: { minima, maxima },
+      } = PRONOSTICO_LOCAL;
+      document.write(minima + " " + maxima + "\n");
+      document.write(`La siguiente es la mínima de hoy ${minima} `);
+
+      //Dato, puedo mostrar con el console.log 2 cosas a la vez
+      //y se van a mostrar separadas por un espacio.
+      console.log(minima, maxima);
     </script>
   </body>
 </html>
