@@ -1,0 +1,48 @@
+El DOM (Document Object Model) es una interfaz de programación para los documentos web. Proporciona una representación estructurada del documento HTML o XML y define cómo los programas pueden interactuar con la estructura del documento, cambiar su contenido, estructura y estilo visual. El DOM representa el documento como un árbol de nodos, donde cada nodo representa una parte del documento, por ejemplo, un elemento HTML, un atributo, o incluso texto.
+
+Nodos
+En el DOM, un nodo es la unidad básica de la estructura de un documento. Un documento se compone de varios nodos, que pueden ser de diferentes tipos:
+
+Elemento: Representa cada etiqueta HTML en el documento. Por ejemplo, <div>, <span>, <p>, etc.
+Texto: El contenido textual dentro de un elemento HTML.
+Atributo: Los atributos de un elemento HTML, como class, id, src, etc.
+Documento: El nodo raíz que representa todo el documento.
+Comentario: El texto de los comentarios en HTML.
+Ejemplo de nodos
+Imagina un documento HTML simple como este:
+
+html
+Copy code
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Mi página</title>
+</head>
+<body>
+    <h1 id="titulo">Hola Mundo</h1>
+    <!-- Esto es un comentario -->
+</body>
+</html>
+En este documento:
+
+El nodo Documento es la raíz del árbol DOM.
+El elemento <html> es un nodo hijo del nodo Documento y padre de <head> y <body>.
+El elemento <title> es un nodo hijo de <head>, y el texto "Mi página" es un nodo de tipo Texto, hijo de <title>.
+El comentario <!-- Esto es un comentario --> es otro tipo de nodo dentro del <body>.
+Objetos
+En el contexto del DOM, cada nodo es también un objeto. En JavaScript, estos objetos pertenecen a diferentes clases según el tipo de nodo: HTMLElement para elementos HTML, Text para nodos de texto, Attr para atributos, y así sucesivamente. Cada uno de estos objetos tiene propiedades y métodos que permiten manipular sus características y comportamientos.
+
+Ejemplo de manipulación de objetos DOM en JavaScript
+Considera el mismo documento HTML anterior. Si quisiéramos cambiar el texto del <h1> a "Adiós Mundo" usando JavaScript, podríamos hacer algo como esto:
+
+javascript
+Copy code
+document.addEventListener('DOMContentLoaded', function() {
+    var titulo = document.getElementById('titulo');
+    titulo.textContent = 'Adiós Mundo';
+});
+En este código:
+
+document.getElementById('titulo') obtiene el objeto que representa el elemento <h1> con el ID "titulo".
+titulo.textContent es una propiedad del objeto titulo que representa el contenido de texto del nodo. Cambiando esta propiedad, modificamos el texto visible en la página.
+El DOM y su manipulación a través de JavaScript son fundamentales para la creación de páginas web interactivas, permitiendo a los desarrolladores modificar dinámicamente el contenido y la apariencia de las páginas.
