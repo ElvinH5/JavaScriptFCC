@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+
+// Diferencias entre var y let
+// Ámbito de bloque (block scope) vs. ámbito de función (function scope):
+
+// var tiene un ámbito de función (function scope), lo que significa que cuando declaras 
+// una variable con var dentro de una función, está disponible en cualquier parte de esa 
+// función, incluso en los bloques internos como ciclos o instrucciones if.
+// let, por otro lado, tiene un ámbito de bloque (block scope), lo que implica que 
+// la variable solo está disponible dentro del bloque donde se declaró, como dentro 
+// de un ciclo for, un bloque if, o simplemente un bloque delimitado por {}.
+// Hoisting (elevación de variables):
+
+// Las variables declaradas con var son elevadas al inicio de su contexto de función.
+//  Esto significa que puedes referenciar una variable var antes de haber sido declarada 
+//  en el código, aunque no se recomienda debido a que puede llevar a errores difíciles 
+//  de rastrear. Sin embargo, solo se eleva la declaración, no la inicialización.
+// Las variables declaradas con let también son sujetas a hoisting, pero no se inicializan 
+// hasta que el código de declaración es ejecutado. Si intentas acceder a ellas antes 
+// de que sean declaradas, obtendrás un error ReferenceError.
+
+// Declaración múltiple:
+
+// Con var, puedes declarar la misma variable múltiples veces en el mismo ámbito sin error. 
+// Esto puede llevar a sobreescrituras inesperadas.
+// let no permite que declares la misma variable más de una vez en el mismo ámbito. 
+// Intentarlo resultará en un error SyntaxError.
+// Ejemplo adicional
+// Consideremos un ejemplo en un contexto de bloque diferente para entender cómo se comportan var y let:
+
+
+function pruebaScope() {
+  if (true) {
+    var varVariable = "visible con var";
+    let letVariable = "visible con let";
+  }
+
+  console.log(varVariable); // Esto funciona porque 'varVariable' tiene un ámbito de función.
+  console.log(letVariable); // Esto arrojará un error porque 'letVariable' tiene un ámbito de bloque.
+}
+
+pruebaScope();
+
+
+// En este ejemplo, varVariable es accesible fuera del bloque if porque tiene ámbito de función, 
+// mientras que letVariable no es accesible fuera de su bloque específico, demostrando su ámbito de bloque.
+
+// Este comportamiento es especialmente importante en la programación moderna de JavaScript donde la claridad 
+// y la prevención de efectos secundarios no deseados son cruciales. Utilizar let y const (este último añade 
+// la característica de inmutabilidad a las variables) ayuda a mantener el código más seguro y más fácil de
+// entender.
+
+
+
+
+
+
+
+    </script>
+</body>
+</html>
